@@ -16,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.rgc.tutorialmod.block.ModBlocks;
+import net.rgc.tutorialmod.component.ModDataComponentTypes;
 
 import java.util.List;
 import java.util.Map;
@@ -51,6 +52,8 @@ public class ChiselItem extends Item {
 
                 level.playSound(null, pContext.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
 
+                pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
+
             }
         }
 
@@ -67,6 +70,12 @@ public class ChiselItem extends Item {
         } else {
 
             pTooltipComponents.add(Component.translatable("tooltip.tutorialmod.chisel"));
+
+        }
+
+        if(pStack.get(ModDataComponentTypes.COORDINATES.get()) != null) {
+
+            pTooltipComponents.add(Component.literal("Last Block changed at" + pStack.get(ModDataComponentTypes.COORDINATES.get())));
 
         }
 

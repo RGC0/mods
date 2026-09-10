@@ -1,4 +1,4 @@
-package net.rgc.tutorialmod.block.custom;
+package net.rgc.tutorialmod.item.custom;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
