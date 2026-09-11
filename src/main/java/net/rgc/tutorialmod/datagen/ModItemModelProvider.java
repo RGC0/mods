@@ -66,10 +66,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.ALEXANDRITE_HOE);
         handheldItem((ModItems.ALEXANDRITE_HAMMER));
 
+        handheldItem(ModItems.CUSTOM_MOD_SWORD);
+        handheldItem(ModItems.CUSTOM_MOD_AXE);
+        handheldItem(ModItems.CUSTOM_MOD_PICKAXE);
+        handheldItem(ModItems.CUSTOM_MOD_HOE);
+        handheldItem(ModItems.CUSTOM_MOD_SHOVEL);
+
         trimmedArmorItem(ModItems.ALEXANDRITE_HELMET);
         trimmedArmorItem(ModItems.ALEXANDRITE_CHESTPLATE);
         trimmedArmorItem(ModItems.ALEXANDRITE_LEGGINGS);
         trimmedArmorItem(ModItems.ALEXANDRITE_BOOTS);
+
+        trimmedArmorItem(ModItems.CUSTOM_MOD_HELMET);
+        trimmedArmorItem(ModItems.CUSTOM_MOD_CHESTPLATE);
+        trimmedArmorItem(ModItems.CUSTOM_MOD_LEGGINGS);
+        trimmedArmorItem(ModItems.CUSTOM_MOD_BOOTS);
 
     }
 

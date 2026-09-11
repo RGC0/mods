@@ -40,6 +40,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         this.add(ModBlocks.CUSTOM_MOD_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.CUSTOM_MOD_ORE.get(), ModItems.CUSTOM_MOD_GEM.get(), 1, 3));
 
+        this.add(ModBlocks.CUSTOM_MOD_DEEPSLATE_ORE.get(),
+                block -> createMultipleOreDrops(ModBlocks.CUSTOM_MOD_DEEPSLATE_ORE.get(), ModItems.CUSTOM_MOD_GEM.get(), 2, 4));
+
+        dropSelf(ModBlocks.CUSTOM_MOD_BLOCK.get());
+
         this.add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(),
                 block -> createMultipleOreDrops(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get(), ModItems.RAW_ALEXANDRITE.get(), 2, 6));
 

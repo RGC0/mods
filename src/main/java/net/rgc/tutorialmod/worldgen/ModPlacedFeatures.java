@@ -22,7 +22,7 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, CUSTOM_MOD_ORE_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_CUSTOM_MOD_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.absolute(-16), VerticalAnchor.absolute(56))));
+                ModOrePlacement.commonOrePlacement(4, HeightRangePlacement.uniform(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(32))));
 
     }
 

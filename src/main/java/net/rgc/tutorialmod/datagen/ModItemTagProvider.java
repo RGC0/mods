@@ -33,6 +33,31 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.ALEXANDRITE_HELMET.get())
                 .add(ModItems.ALEXANDRITE_CHESTPLATE.get())
                 .add(ModItems.ALEXANDRITE_LEGGINGS.get())
-                .add(ModItems.ALEXANDRITE_BOOTS.get());
+                .add(ModItems.ALEXANDRITE_BOOTS.get())
+                .add(ModItems.CUSTOM_MOD_HELMET.get())
+                .add(ModItems.CUSTOM_MOD_CHESTPLATE.get())
+                .add(ModItems.CUSTOM_MOD_LEGGINGS.get())
+                .add(ModItems.CUSTOM_MOD_BOOTS.get());
+
+        tag(ItemTags.SWORDS).add(ModItems.CUSTOM_MOD_SWORD.get());
+
+        tag(ItemTags.AXES).add(ModItems.CUSTOM_MOD_AXE.get());
+
+        tag(ItemTags.PICKAXES).add(ModItems.CUSTOM_MOD_PICKAXE.get());
+
+        tag(ItemTags.SHOVELS).add(ModItems.CUSTOM_MOD_SHOVEL.get());
+
+        tag(ItemTags.HOES).add(ModItems.CUSTOM_MOD_HOE.get());
+
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.CUSTOM_MOD_HELMET.get());
+
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.CUSTOM_MOD_CHESTPLATE.get());
+
+        tag(ItemTags.LEG_ARMOR).add(ModItems.CUSTOM_MOD_LEGGINGS.get());
+
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.CUSTOM_MOD_BOOTS.get());
+
+
     }
+
 }

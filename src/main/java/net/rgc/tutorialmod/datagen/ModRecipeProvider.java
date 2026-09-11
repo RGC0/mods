@@ -3,6 +3,7 @@ package net.rgc.tutorialmod.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.item.crafting.*;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
@@ -30,6 +31,87 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("AAA")
                 .define('A', ModItems.ALEXANDRITE.get())
                 .unlockedBy(getHasName(ModItems.ALEXANDRITE.get()), has(ModItems.ALEXANDRITE.get())).save(pRecipeOutput);
+
+        //Custom stuff
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CUSTOM_MOD_BLOCK.get())
+                .pattern("AAA")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CUSTOM_MOD_GEM.get(), 9)
+                .requires(ModBlocks.CUSTOM_MOD_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.CUSTOM_MOD_BLOCK.get()), has(ModBlocks.CUSTOM_MOD_BLOCK.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUSTOM_MOD_SWORD.get())
+                .pattern(" A ")
+                .pattern(" A ")
+                .pattern(" B ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUSTOM_MOD_AXE.get())
+                .pattern("AA ")
+                .pattern("AB ")
+                .pattern(" B ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUSTOM_MOD_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUSTOM_MOD_SHOVEL.get())
+                .pattern(" A ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUSTOM_MOD_HOE.get())
+                .pattern("AA ")
+                .pattern(" B ")
+                .pattern(" B ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .define('B', Items.STICK)
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CUSTOM_MOD_HELMET.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("   ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,  ModItems.CUSTOM_MOD_CHESTPLATE.get())
+                .pattern("A A")
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,  ModItems.CUSTOM_MOD_LEGGINGS.get())
+                .pattern("AAA")
+                .pattern("A A")
+                .pattern("A A")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC,  ModItems.CUSTOM_MOD_BOOTS.get())
+                .pattern("A A")
+                .pattern("A A")
+                .pattern("   ")
+                .define('A', ModItems.CUSTOM_MOD_GEM.get())
+                .unlockedBy(getHasName(ModItems.CUSTOM_MOD_GEM.get()), has(ModItems.CUSTOM_MOD_GEM.get())).save(pRecipeOutput);
+        //custom end
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ALEXANDRITE.get(), 9)
                 .requires(ModBlocks.ALEXANDRITE_BLOCK.get())

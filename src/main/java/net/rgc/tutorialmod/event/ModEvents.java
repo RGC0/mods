@@ -2,9 +2,14 @@ package net.rgc.tutorialmod.event;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -12,7 +17,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 import net.rgc.tutorialmod.TutorialMod;
+import net.rgc.tutorialmod.item.ModItems;
 import net.rgc.tutorialmod.item.custom.HammerItem;
+import net.rgc.tutorialmod.villager.ModVillagers;
 
 
 @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
@@ -44,5 +51,25 @@ public class ModEvents {
                 HARVESTED_BLOCKS.remove(pos);
             }
         }
+    }
+    @SubscribeEvent
+    public static void addCustomTrades(VillagerTradesEvent event) {
+
+        if(event.getType() == VillagerProfession.FARMER) {
+            var trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 5),
+                    new ItemStack(ModItems.KOHLRABI.get(), 14), 6, 4, 0.05f));
+        }
+
+        if(event.getType() == ModVillagers.KAUPENGER.get()) {
+            var trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.DIAMOND, 1),
+                    new ItemStack(ModItems.ALEXANDRITE.get(), 2), 6, 4, 0.05f));
+        }
+
     }
 }

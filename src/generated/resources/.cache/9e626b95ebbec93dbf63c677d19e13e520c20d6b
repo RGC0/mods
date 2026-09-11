@@ -1,9 +1,11 @@
-// 1.21	2026-09-10T07:16:01.4821538	Tags for minecraft:block mod id tutorialmod
+// 1.21	2026-09-10T21:30:44.128463	Tags for minecraft:block mod id tutorialmod
 7040c1554c67074e06991cf7ea99e691acfb8ddc data/minecraft/tags/block/fences.json
 8f61b67394cb2303f2111446266a199eeff13c4d data/minecraft/tags/block/fence_gates.json
-691c8d7ae4c11feb5bba335117568893dccdd1d7 data/minecraft/tags/block/mineable/pickaxe.json
+ddb5f6dcb3859552087d6af46a70bddc871dd596 data/minecraft/tags/block/mineable/pickaxe.json
 1f801a8961e55ddcbf49e80de2c9abc686c49a45 data/minecraft/tags/block/needs_diamond_tool.json
-7405b17055c5e64b884edcc98ba100caaf3cfd0f data/minecraft/tags/block/needs_iron_tool.json
+818dba994e79981ce8864e871aaefde88e84fee1 data/minecraft/tags/block/needs_iron_tool.json
 e6dfaa2212b26282ddb31293aef983be64e2c864 data/minecraft/tags/block/walls.json
 e07c856c08662f1f6823861c338016ba586b5e0c data/tutorialmod/tags/block/incorrect_for_alexandrite_tool.json
+94036e58d9a53d023c3684db38503ca2d214a0a5 data/tutorialmod/tags/block/incorrect_for_custom_mod_gem_tool.json
 4e4e2132df461541e72755c75c127553bc050fdc data/tutorialmod/tags/block/needs_alexandrite_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/tutorialmod/tags/block/needs_custom_mod_gem_tool.json

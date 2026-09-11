@@ -23,9 +23,11 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreConfiguration.TargetBlockState> overworldCustomModOre = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.CUSTOM_MOD_ORE.get().defaultBlockState()));
+                OreConfiguration.target(stoneReplaceables, ModBlocks.CUSTOM_MOD_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.CUSTOM_MOD_DEEPSLATE_ORE.get().defaultBlockState()));
 
         register(context, OVERWORLD_CUSTOM_MOD_ORE_KEY, Feature.ORE, new OreConfiguration(overworldCustomModOre, 3));
 

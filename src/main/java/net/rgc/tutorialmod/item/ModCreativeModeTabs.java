@@ -34,6 +34,15 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.ALEXANDRITE_CHESTPLATE.get());
                         output.accept(ModItems.ALEXANDRITE_LEGGINGS.get());
                         output.accept(ModItems.ALEXANDRITE_BOOTS.get());
+                        output.accept(ModItems.CUSTOM_MOD_SWORD.get());
+                        output.accept(ModItems.CUSTOM_MOD_AXE.get());
+                        output.accept(ModItems.CUSTOM_MOD_PICKAXE.get());
+                        output.accept(ModItems.CUSTOM_MOD_HOE.get());
+                        output.accept(ModItems.CUSTOM_MOD_SHOVEL.get());
+                        output.accept(ModItems.CUSTOM_MOD_HELMET.get());
+                        output.accept(ModItems.CUSTOM_MOD_CHESTPLATE.get());
+                        output.accept(ModItems.CUSTOM_MOD_LEGGINGS.get());
+                        output.accept(ModItems.CUSTOM_MOD_BOOTS.get());
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexandrite_blocks_tab",
@@ -45,6 +54,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_ORE.get());
                         output.accept(ModBlocks.CUSTOM_MOD_ORE.get());
+                        output.accept(ModBlocks.CUSTOM_MOD_DEEPSLATE_ORE.get());
+                        output.accept(ModBlocks.CUSTOM_MOD_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get());
                         output.accept(ModBlocks.MAGIC_BLOCK.get());
                         output.accept(ModBlocks.ALEXANDRITE_STAIRS.get());

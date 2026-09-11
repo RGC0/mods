@@ -19,6 +19,7 @@ import net.rgc.tutorialmod.block.ModBlocks;
 import net.rgc.tutorialmod.component.ModDataComponentTypes;
 import net.rgc.tutorialmod.item.ModCreativeModeTabs;
 import net.rgc.tutorialmod.item.ModItems;
+import net.rgc.tutorialmod.villager.ModVillagers;
 import org.slf4j.Logger;
 //Somethings Changed
 // The value here should match an entry in the META-INF/mods.toml file
@@ -48,6 +49,8 @@ public class TutorialMod
         ModBlocks.register(modEventBus);
 
         ModDataComponentTypes.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

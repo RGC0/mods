@@ -25,14 +25,22 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get())
                 .add(ModBlocks.ALEXANDRITE_ORE.get())
+
                 .add(ModBlocks.CUSTOM_MOD_ORE.get())
+                .add(ModBlocks.CUSTOM_MOD_DEEPSLATE_ORE.get())
+                .add(ModBlocks.CUSTOM_MOD_BLOCK.get())
+
                 .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get());
 
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.ALEXANDRITE_DEEPSLATE_ORE.get())
-                .add(ModBlocks.CUSTOM_MOD_ORE.get());
+
+                .add(ModBlocks.CUSTOM_MOD_ORE.get())
+                .add(ModBlocks.CUSTOM_MOD_DEEPSLATE_ORE.get())
+                .add(ModBlocks.CUSTOM_MOD_BLOCK.get());
+
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.RAW_ALEXANDRITE_BLOCK.get());
@@ -49,6 +57,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_ALEXANDRITE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .remove(ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL);
+
+        tag(ModTags.Blocks.NEEDS_CUSTOM_MOD_GEM_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_CUSTOM_MOD_GEM_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_CUSTOM_MOD_GEM_TOOL);
 
     }
 }

@@ -11,4 +11,8 @@ public class ModToolTiers {
             ModTags.Blocks.NEEDS_ALEXANDRITE_TOOL, () -> Ingredient.of(ModItems.ALEXANDRITE.get()),
             ModTags.Blocks.INCORRECT_FOR_ALEXANDRITE_TOOL);
 
+    public static final Tier CUSTOM_MOD_GEM = new ForgeTier(1200, 10F,2.7F,18,
+            ModTags.Blocks.NEEDS_CUSTOM_MOD_GEM_TOOL, () -> Ingredient.of(ModItems.CUSTOM_MOD_GEM.get()),
+            ModTags.Blocks.INCORRECT_CUSTOM_MOD_GEM_TOOL);
+
 }

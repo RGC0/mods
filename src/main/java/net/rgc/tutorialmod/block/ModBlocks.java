@@ -39,6 +39,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> CUSTOM_MOD_BLOCK = registerBlock("custom_mod_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
     public static final RegistryObject<Block> CUSTOM_MOD_ORE = registerBlock( "custom_mod_ore",
             () -> new DropExperienceBlock(UniformInt.of(5,9), BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
@@ -46,6 +50,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> ALEXANDRITE_DEEPSLATE_ORE = registerBlock( "alexandrite_deepslate_ore",
             () -> new DropExperienceBlock(UniformInt.of(3,6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final RegistryObject<Block> CUSTOM_MOD_DEEPSLATE_ORE = registerBlock( "custom_mod_deepslate_ore",
+            () -> new DropExperienceBlock(UniformInt.of(5,9), BlockBehaviour.Properties.of()
+                    .strength(4.5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
     public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).noLootTable()));

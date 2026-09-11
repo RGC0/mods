@@ -82,8 +82,36 @@ public class ModItems {
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(18))));
 
 
+    //custom stuff
 
+    public static final RegistryObject<Item> CUSTOM_MOD_SWORD = ITEMS.register("custom_mod_sword",
+            () -> new SwordItem(ModToolTiers.CUSTOM_MOD_GEM, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.CUSTOM_MOD_GEM, 3,-2.4f))));
+    public static final RegistryObject<Item> CUSTOM_MOD_AXE = ITEMS.register("custom_mod_axe",
+            () -> new AxeItem(ModToolTiers.CUSTOM_MOD_GEM, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.CUSTOM_MOD_GEM, 4.3f, -2.7f))));
+    public static final RegistryObject<Item> CUSTOM_MOD_PICKAXE = ITEMS.register("custom_mod_pickaxe",
+            () -> new PickaxeItem(ModToolTiers.CUSTOM_MOD_GEM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.CUSTOM_MOD_GEM, 1,-2.8f))));
+    public static final RegistryObject<Item> CUSTOM_MOD_SHOVEL = ITEMS.register("custom_mod_shovel",
+            () -> new ShovelItem(ModToolTiers.CUSTOM_MOD_GEM, new Item.Properties()
+                    .attributes(ShovelItem.createAttributes(ModToolTiers.CUSTOM_MOD_GEM, 1.5f,-3.0f))));
+    public static final RegistryObject<Item> CUSTOM_MOD_HOE = ITEMS.register("custom_mod_hoe",
+            () -> new HoeItem(ModToolTiers.CUSTOM_MOD_GEM, new Item.Properties()
+                    .attributes(HoeItem.createAttributes(ModToolTiers.CUSTOM_MOD_GEM, 0,-3.0f))));
 
+    public static final RegistryObject<Item> CUSTOM_MOD_HELMET = ITEMS.register("custom_mod_helmet",
+            () -> new ArmorItem(ModArmorMaterials.CUSTOM_MOD_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(26))));
+    public static final RegistryObject<Item> CUSTOM_MOD_CHESTPLATE = ITEMS.register("custom_mod_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.CUSTOM_MOD_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(26))));
+    public static final RegistryObject<Item> CUSTOM_MOD_LEGGINGS = ITEMS.register("custom_mod_leggings",
+            () -> new ArmorItem(ModArmorMaterials.CUSTOM_MOD_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(26))));
+    public static final RegistryObject<Item> CUSTOM_MOD_BOOTS = ITEMS.register("custom_mod_boots",
+            () -> new ArmorItem(ModArmorMaterials.CUSTOM_MOD_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(26))));
 
 
 

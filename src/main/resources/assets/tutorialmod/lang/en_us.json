@@ -1,6 +1,6 @@
 {
   "item.tutorialmod.alexandrite": "Alexandrite Gem",
-  "item.tutorialmod.custom_mod_gem": "Custom Gem",
+  "item.tutorialmod.custom_mod_gem": "Custom Mod Gem",
   "item.tutorialmod.raw_alexandrite": "Raw Alexandrite",
   "item.tutorialmod.chisel": "Chisel",
   "item.tutorialmod.kohlrabi": "Kohlrabi",
@@ -13,6 +13,17 @@
   "item.tutorialmod.alexandrite_hoe": "Alexandrite Hoe",
   "item.tutorialmod.alexandrite_hammer": "Alexandrite Hammer",
 
+  "item.tutorialmod.custom_mod_sword": "Custom Mod Sword",
+  "item.tutorialmod.custom_mod_axe": "Custom Mod Axe",
+  "item.tutorialmod.custom_mod_pickaxe": "Custom Mod Pickaxe",
+  "item.tutorialmod.custom_mod_shovel": "Custom Mod Shovel",
+  "item.tutorialmod.custom_mod_hoe": "Custom Mod Hoe",
+
+  "item.tutorialmod.custom_mod_helmet": "Custom Mod Helmet",
+  "item.tutorialmod.custom_mod_chestplate": "Custom Mod Chestplate",
+  "item.tutorialmod.custom_mod_leggings": "Custom Mod Leggings",
+  "item.tutorialmod.custom_mod_boots": "Custom Mod Boots",
+
   "item.tutorialmod.alexandrite_helmet": "Alexandrite Helmet",
   "item.tutorialmod.alexandrite_chestplate": "Alexandrite Chestplate",
   "item.tutorialmod.alexandrite_leggings": "Alexandrite Leggings",
@@ -22,6 +33,8 @@
   "block.tutorialmod.raw_alexandrite_block": "Block of Raw Alexandrite",
   "block.tutorialmod.alexandrite_ore": "Alexandrite Ore",
   "block.tutorialmod.custom_mod_ore": "Custom Mod Ore",
+  "block.tutorialmod.custom_mod_deepslate_ore": "Custom Mod Deepslate Ore",
+  "block.tutorialmod.custom_mod_block": "Block of Custom Mod Gem",
   "block.tutorialmod.alexandrite_deepslate_ore": "Alexandrite Deepslate Ore",
   "block.tutorialmod.magic_block": "Magic Block",
 
@@ -35,6 +48,8 @@
   "block.tutorialmod.alexandrite_door": "Alexandrite Door",
   "block.tutorialmod.alexandrite_trap_door": "Alexandrite Trapdoor",
   "block.tutorialmod.alexandrite_lamp": "Alexandrite Lamp",
+
+  "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger",
 
   "creativetab.tutorialmod.alexandrite_items": "Alexandrite Items",
   "creativetab.tutorialmod.alexandrite_blocks": "Alexandrite Blocks",
