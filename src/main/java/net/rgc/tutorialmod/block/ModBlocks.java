@@ -33,7 +33,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).requiresCorrectToolForDrops()));
 
-
+    public static final RegistryObject<Block> CUSTOM_MOD_PLACEHOLDER = registerBlock( "CUSTOM_MOD_PLACEHOLDER",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(10f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ALEXANDRITE_ORE = registerBlock( "alexandrite_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4), BlockBehaviour.Properties.of()

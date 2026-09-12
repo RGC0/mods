@@ -9,6 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.rgc.tutorialmod.TutorialMod;
 import net.rgc.tutorialmod.item.custom.FuelItem;
 import net.rgc.tutorialmod.item.custom.ChiselItem;
+import net.rgc.tutorialmod.item.custom.CustomVillagerChangerItem;
 import net.rgc.tutorialmod.item.custom.HammerItem;
 
 import java.util.List;
@@ -112,6 +113,8 @@ public class ModItems {
     public static final RegistryObject<Item> CUSTOM_MOD_BOOTS = ITEMS.register("custom_mod_boots",
             () -> new ArmorItem(ModArmorMaterials.CUSTOM_MOD_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(26))));
+
+    public static final RegistryObject<Item> CUSTOM_VILLAGER_CHANGER = ITEMS.register("custom_nitwit_chnager", () -> new CustomVillagerChangerItem(new Item.Properties().durability(1)));
 
 
 

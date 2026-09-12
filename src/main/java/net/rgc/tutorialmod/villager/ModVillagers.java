@@ -26,6 +26,14 @@ public class ModVillagers {
                     holder -> holder.value() == KAUPEN_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
                     SoundEvents.VILLAGER_CELEBRATE));
 
+    public static final RegistryObject<PoiType> CUSTOM__MOD_POI = POI_TYPES.register("custom_mod_poi",
+            () -> new PoiType(ImmutableSet.copyOf(ModBlocks.CUSTOM_MOD_PLACEHOLDER.get().getStateDefinition().getPossibleStates()),
+            1, 1));
+
+    public static final RegistryObject<VillagerProfession> CUSTOM_MOD_VILLAGER = VILLAGER_PROFESSIONS.register("custom_mod_villager",
+            () -> new VillagerProfession("custom_mod_villager", holder -> holder.value() == CUSTOM__MOD_POI.get(),
+                    holder -> holder.value() == CUSTOM__MOD_POI.get(), ImmutableSet.of(), ImmutableSet.of(),
+                    SoundEvents.VILLAGER_CELEBRATE));
 
 
     public static void register(IEventBus eventBus) {

@@ -8,6 +8,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,6 +18,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import net.rgc.tutorialmod.TutorialMod;
+import net.rgc.tutorialmod.block.ModBlocks;
 import net.rgc.tutorialmod.item.ModItems;
 import net.rgc.tutorialmod.item.custom.HammerItem;
 import net.rgc.tutorialmod.villager.ModVillagers;
@@ -35,14 +37,14 @@ public class ModEvents {
         Player player = event.getPlayer();
         ItemStack mainHandItem = player.getMainHandItem();
 
-        if(mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
+        if (mainHandItem.getItem() instanceof HammerItem hammer && player instanceof ServerPlayer serverPlayer) {
             BlockPos initialBlockPos = event.getPos();
-            if(HARVESTED_BLOCKS.contains(initialBlockPos)) {
+            if (HARVESTED_BLOCKS.contains(initialBlockPos)) {
                 return;
             }
 
-            for(BlockPos pos : HammerItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
-                if(pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
+            for (BlockPos pos : HammerItem.getBlocksToBeDestroyed(1, initialBlockPos, serverPlayer)) {
+                if (pos == initialBlockPos || !hammer.isCorrectToolForDrops(mainHandItem, event.getLevel().getBlockState(pos))) {
                     continue;
                 }
 
@@ -52,10 +54,11 @@ public class ModEvents {
             }
         }
     }
+
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
 
-        if(event.getType() == VillagerProfession.FARMER) {
+        if (event.getType() == VillagerProfession.FARMER) {
             var trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
@@ -63,7 +66,7 @@ public class ModEvents {
                     new ItemStack(ModItems.KOHLRABI.get(), 14), 6, 4, 0.05f));
         }
 
-        if(event.getType() == ModVillagers.KAUPENGER.get()) {
+        if (event.getType() == ModVillagers.KAUPENGER.get()) {
             var trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
@@ -71,5 +74,37 @@ public class ModEvents {
                     new ItemStack(ModItems.ALEXANDRITE.get(), 2), 6, 4, 0.05f));
         }
 
+        if (event.getType() == ModVillagers.CUSTOM_MOD_VILLAGER.get()) {
+            var trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(ModItems.CUSTOM_MOD_GEM.get(), 2),
+                    new ItemStack(Items.GOLDEN_CARROT, 16), 8, 2, 0.05f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.DIAMOND, 2),
+                    new ItemStack(ModItems.CUSTOM_MOD_GEM.get(), 4), 32, 4, 0.05f));
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.NETHERITE_INGOT, 1),
+                    new ItemStack(ModItems.CUSTOM_MOD_GEM.get(), 16), 8, 12, 0.05f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Blocks.GOLD_BLOCK, 3),
+                    new ItemStack(ModBlocks.CUSTOM_MOD_BLOCK.get(), 1), 16, 4, 0.05f));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(ModItems.CUSTOM_MOD_GEM.get(), 4),
+                    new ItemStack(Items.FIREWORK_ROCKET, 32), 16, 2, 0.05f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(ModItems.CUSTOM_MOD_GEM.get(), 32),
+                    new ItemStack(Items.TOTEM_OF_UNDYING, 1), 1, 12, 0.05f));
+
+            trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(ModItems.CUSTOM_MOD_GEM.get(), 64),
+                    new ItemStack(Items.ENCHANTED_GOLDEN_APPLE, 1), 1, 12, 0.05f));
+
+        }
     }
 }
